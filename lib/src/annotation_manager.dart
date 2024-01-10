@@ -309,7 +309,10 @@ class SymbolManager extends AnnotationManager<Symbol> {
           // note that web does not support setting this in a fully data driven
           // way this is a upstream issue
           textFont: kIsWeb
-              ? null
+              ? [
+                  Expressions.literal,
+                  ['Metropolis Medium']
+                ]
               : [
                   Expressions.caseExpression,
                   [Expressions.has, 'fontNames'],

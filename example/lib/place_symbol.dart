@@ -67,7 +67,9 @@ class PlaceSymbolBodyState extends State<PlaceSymbolBody> {
 
   /// Adds a network image to the currently displayed style
   Future<void> addImageFromUrl(String name, Uri uri) async {
-    var response = await http.get(uri);
+    var response = await http.get(uri, headers: {
+      'Access-Control-Allow-Origin': '*',
+    });
     return controller!.addImage(name, response.bodyBytes);
   }
 

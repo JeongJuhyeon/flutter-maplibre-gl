@@ -32,6 +32,7 @@ import 'offline_regions.dart';
 import 'custom_marker.dart';
 import 'place_batch.dart';
 import 'layer.dart';
+import 'layer_fill_only.dart';
 import 'sources.dart';
 
 import 'package:maplibre_gl/maplibre_gl.dart';
@@ -47,6 +48,7 @@ final List<ExamplePage> _allPages = <ExamplePage>[
   const LinePage(),
   const LocalStylePage(),
   const LayerPage(),
+  // const LayerFillPage(),
   const PlaceCirclePage(),
   const PlaceFillPage(),
   const ScrollingMapPage(),
